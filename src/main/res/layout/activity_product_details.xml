@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".home.HomeActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorhome"
+
+                >
+
+                <ImageView
+                    android:id="@+id/toggles"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_baseline_menu_24" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/toggles"
+                    android:text="متجر الصعيد"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/tv_title"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#DDA90C" />
+
+                <ImageView
+                    android:id="@+id/image_cart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                <ImageView
+                    android:id="@+id/image_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@id/image_cart"
+                    android:src="@drawable/ic_baseline_search_24" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/linershow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/appbar">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namae_catog"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="right"
+                            android:paddingTop="10dp"
+                            android:text="Mobails"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="fitXY"
+                            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="السعر :"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:layout_alignParentRight="true"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="3000 "
+                                android:textColor="#F30606"
+                                android:textSize="25dp"
+                                android:layout_toLeftOf="@id/price"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="السعر :"
+                            android:textColor="@color/light_black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/quantay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="السعر :"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:layout_alignParentRight="true"
+                                android:textStyle="bold" />
+                            <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="3000 "
+                                android:textColor="#F30606"
+                                android:textSize="25dp"
+                                android:layout_toLeftOf="@id/quantay"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_py"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+
+                            android:background="@drawable/draw_borderandcolor"
+                            android:gravity="center"
+                            android:text="اشترى الأن  "
+
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+
+                           />
+
+                        <Button
+                            android:id="@+id/btn_addCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/draw_borderandcolor"
+                            android:gravity="center"
+                            android:text="أضــف للسلة  "
+
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+
+                            />
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/item_catogrey"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimary"
+            app:menu="@menu/menu">
+
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

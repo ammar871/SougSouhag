@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/catograyFragment">
+
+
+    <fragment
+        android:id="@+id/prouductFragment"
+        android:name="com.souqshag.souqsohage.catogray.TabProuductFragment"
+        android:label="fragment_prouduct"
+        tools:layout="@layout/fragment_prouduct" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/catograyFragment"
+        android:name="com.souqshag.souqsohage.catogray.CatograyFragment"
+        android:label="fragment_catogray"
+        tools:layout="@layout/fragment_catogray" >
+        <action
+            android:id="@+id/action_catograyFragment_to_prouductFragment"
+            app:destination="@id/prouductFragment" />
+        <action
+            android:id="@+id/action_catograyFragment_to_productActivity"
+            app:destination="@id/productActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/productActivity"
+        android:name="com.souqshag.souqsohage.catogray.ProductActivity"
+        android:label="ProductActivity" />
+</navigation>
